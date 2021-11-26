@@ -10,15 +10,25 @@ module.exports = {
       },
     ],
     ["meta", { name: "keywords", content: "vite vui" }],
-    ["link", { rel: "icon", href: "/1.jpg" }],
+    ["link", { rel: "icon", href: "/icon.png" }],
   ],
   themeConfig: {
-    nav: [{ text: "首页", link: "/" }],
+    sidebar: {
+      "/": [
+        {
+          text: "Git",
+          link: "/Git/",
+        },
+      ],
+    },
+    nav: [
+      { text: "首页", link: "/" },
+      { text: "文档", link: "/Git/" },
+    ],
     search: true,
     algolia: {
-      appKey: "",
-      indexName: "",
-      searchParameters: { faeFilters: ["tags:guide,api"] },
+      apiKey: "cc54e9aff902fca0c0088f4f03d26bc2",
+      indexName: "vitepress",
     },
   },
   title: "HBA站点  😉",
